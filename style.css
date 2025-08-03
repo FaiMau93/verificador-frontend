@@ -16,7 +16,7 @@ border: 2px solid #1a73e8;
 border-radius: 10px;
 margin-bottom: 10px;
 /* Intentando compensar la orientación de la cámara en horizontal /
-transform: rotate(90deg); / Prueba inicial */
+transform: rotate(-90deg); / Prueba inicial */
 }
 
 button {
@@ -40,3 +40,4 @@ padding: 10px;
 border-radius: 10px;
 box-shadow: 0 0 5px #999;
 }
+
