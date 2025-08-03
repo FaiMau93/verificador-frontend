@@ -22,7 +22,7 @@ video {
     margin-bottom: 10px;
     
     /* <-- SOLUCIÓN: Rota 90 grados y voltea horizontalmente */
-    transform: rotate(90deg) scaleX(-1);
+    transform: rotate(-90deg) scaleX(-1);
     
     height: 300px;
     object-fit: cover;
@@ -76,3 +76,4 @@ padding: 10px;
 border-radius: 10px;
 box-shadow: 0 0 5px #999;
 }
+
