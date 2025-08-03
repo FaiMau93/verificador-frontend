@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Verificador PWA</title>
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Códigos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
-  <h1>🔍 Verificador de Código</h1>
+    <div class="violet-moon"></div>
+    <div class="violet-star">⭐</div>
+    <div class="circuit-pattern"></div>
+    
+    <h1>🔍 Verificador de Código</h1>
 
-  <video id="video" autoplay playsinline></video>
-  <canvas id="canvas" style="display:none;"></canvas>
+    <video id="video" autoplay playsinline></video>
+    <canvas id="canvas" style="display: none;"></canvas>
 
-  <button id="scanBtn">📷 Escanear</button>
+    <button id="scanBtn">Escanear Código</button>
+    
+    <div id="result">Esperando escaneo...</div>
 
-  <div id="result">Esperando escaneo...</div>
-
-  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.0.1/dist/tesseract.min.js"></script>
-  <script src="main.js"></script>
+    <script src="https://unpkg.com/tesseract.js@2.1.4/dist/tesseract.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
