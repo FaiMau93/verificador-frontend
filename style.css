@@ -15,6 +15,9 @@ video {
     border: 2px solid #1a73e8;
     border-radius: 10px;
     margin-bottom: 10px;
+    
+    /* <-- NUEVO: Rota el video de la cámara 90 grados */
+    transform: rotate(90deg);
 }
 
 button {
