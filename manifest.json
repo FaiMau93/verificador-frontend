@@ -1,0 +1,15 @@
+{
+  "name": "Verificador de Códigos",
+  "short_name": "Verificador",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f0f8ff",
+  "theme_color": "turquoise",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
