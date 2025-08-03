@@ -17,7 +17,7 @@ video {
     margin-bottom: 10px;
     
     /* <-- NUEVO: Rotación y volteo horizontal para la cámara */
-    transform: rotate(-180deg) scaleX(-1)
+    transform: rotate(90deg) scaleX(-1)
     
     /* Ajustes para el tamaño y la proporción en horizontal */
     height: 300px; /* Puedes ajustar esta altura según tus pruebas */
@@ -45,6 +45,7 @@ button:hover {
     border-radius: 10px;
     box-shadow: 0 0 5px #999;
 }
+
 
 
 
