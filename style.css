@@ -1,43 +1,42 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #e0f0ff;
-    padding: 20px;
+font-family: Arial, sans-serif;
+text-align: center;
+background-color: #e0f0ff;
+padding: 20px;
 }
 
 h1 {
-    color: #1a73e8;
+color: #1a73e8;
 }
 
 video {
-    width: 90%;
-    max-width: 400px;
-    border: 2px solid #1a73e8;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    
-    /* <-- NUEVO: Rota el video de la cámara 90 grados */
-    transform: rotate(90deg);
+width: 90%;
+max-width: 400px;
+border: 2px solid #1a73e8;
+border-radius: 10px;
+margin-bottom: 10px;
+/* Intentando compensar la orientación de la cámara en horizontal /
+transform: rotate(90deg); / Prueba inicial */
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #1a73e8;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
+padding: 10px 20px;
+background-color: #1a73e8;
+color: white;
+border: none;
+border-radius: 10px;
+font-size: 16px;
+cursor: pointer;
 }
 
 button:hover {
-    background-color: #0b59c4;
+background-color: #0b59c4;
 }
 
 #result {
-    margin-top: 15px;
-    background: #ffffff;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px #999;
+margin-top: 15px;
+background: #ffffff;
+padding: 10px;
+border-radius: 10px;
+box-shadow: 0 0 5px #999;
 }
