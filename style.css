@@ -3,15 +3,10 @@ body {
     text-align: center;
     background-color: #e0f0ff;
     padding: 20px;
-font-family: Arial, sans-serif;
-text-align: center;
-background-color: #e0f0ff;
-padding: 20px;
 }
 
 h1 {
     color: #1a73e8;
-color: #1a73e8;
 }
 
 video {
@@ -21,22 +16,12 @@ video {
     border-radius: 10px;
     margin-bottom: 10px;
     
-    /* <-- SOLUCIÓN: Rota 90 grados y voltea horizontalmente */
-    transform: rotate(180deg) scaleX(-1);
+    /* <-- NUEVO: Rotación y volteo horizontal para la cámara */
+    transform: rotate(90deg) scaleX(-1)
     
-    height: 300px;
+    /* Ajustes para el tamaño y la proporción en horizontal */
+    height: 300px; /* Puedes ajustar esta altura según tus pruebas */
     object-fit: cover;
-width: 90%;
-max-width: 400px;
-border: 2px solid #1a73e8;
-border-radius: 10px;
-margin-bottom: 10px;
-
-/* Prueba 2 (si la anterior no funciona): Rotar y luego voltear */
-/* transform: rotate(90deg) scaleX(-1); */
-
-height: 300px;
-object-fit: cover;
 }
 
 button {
@@ -47,18 +32,10 @@ button {
     border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
-padding: 10px 20px;
-background-color: #1a73e8;
-color: white;
-border: none;
-border-radius: 10px;
-font-size: 16px;
-cursor: pointer;
 }
 
 button:hover {
     background-color: #0b59c4;
-background-color: #0b59c4;
 }
 
 #result {
@@ -67,11 +44,4 @@ background-color: #0b59c4;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 5px #999;
-margin-top: 15px;
-background: #ffffff;
-padding: 10px;
-border-radius: 10px;
-box-shadow: 0 0 5px #999;
 }
-
-
