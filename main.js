@@ -2,13 +2,13 @@ const video = document.getElementById('video');
 const canvas = document.getElementById('canvas');
 const resultDiv = document.getElementById('result');
 
-// 📸 Iniciar cámara
-navigator.mediaDevices.getUserMedia({ video: true })
+// 📸 Iniciar cámara (AHORA ABRE LA CÁMARA TRASERA)
+navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } })
     .then(stream => {
         video.srcObject = stream;
     })
     .catch(err => {
-        resultDiv.innerText = '⚠️ Error al acceder a la cámara';
+        resultDiv.innerHTML = '⚠️ Error al acceder a la cámara. Asegúrate de tener una cámara conectada y haber dado permiso.';
         console.error(err);
     });
 
@@ -27,6 +27,13 @@ document.getElementById('scanBtn').addEventListener('click', () => {
     }).then(({ data: { text } }) => {
         const scannedText = text.trim().toUpperCase();
         console.log('🔍 Texto OCR en mayúsculas:', scannedText);
+        
+        // Si el texto detectado está vacío o es muy corto, mostramos un mensaje de error
+        if (scannedText.length < 5) {
+            resultDiv.innerHTML = `❌ No se detectó un código válido. Intenta de nuevo.`;
+            return; // Detenemos la ejecución
+        }
+
         resultDiv.innerHTML = `✅ Texto detectado:\n${scannedText}`;
 
         // 👇 Mandar el texto escaneado al backend para verificar
@@ -63,12 +70,12 @@ function verificarClave(clave) {
             `;
         } else {
             // Mostrar mensaje de error si clave no válida o no encontrada
-            resultDiv.innerHTML += `<br>❌ ${data.message}`;
+            resultDiv.innerHTML = `<br>❌ ${data.message}`;
         }
     })
     .catch(err => {
         // Mostrar error si no se puede conectar al backend
-        resultDiv.innerHTML += '<br>⚠️ Error de conexión con el backend';
+        resultDiv.innerHTML += '<br>⚠️ Error de conexión con el backend. Por favor, verifica tu conexión a internet o la URL del backend.';
         console.error(err);
     });
 }
