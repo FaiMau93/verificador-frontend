@@ -16,8 +16,8 @@ video {
     border-radius: 10px;
     margin-bottom: 10px;
     
-    /* <-- SOLUCIÓN: Rota 90 grados y voltea horizontalmente */
-    transform: rotate(90deg) scaleX(-1);
+    /* SOLUCIÓN: Voltea horizontalmente para eliminar el efecto espejo */
+    transform: scaleX(-1);
     
     height: 300px;
     object-fit: cover;
